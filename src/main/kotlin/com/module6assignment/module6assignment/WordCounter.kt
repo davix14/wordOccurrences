@@ -3,6 +3,7 @@ package com.module6assignment.module6assignment
 import org.jsoup.Jsoup
 import java.net.URL
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.collections.LinkedHashMap
 
 class WordCounter constructor(
@@ -37,7 +38,7 @@ class WordCounter constructor(
         const val END_OF_POEM = "***"
     }
 
-    fun getDocAndWords() {
+    fun getDocAndWords(): ArrayList<String> {
         //  first loop to read the first lines before the poem begins
         while (proceed) {
             //  get next line and remove html markup
@@ -51,7 +52,7 @@ class WordCounter constructor(
                 }
             }
         }
-        printWordCount()
+        return printWordCount()
     }
 
     private fun readPoem() {
@@ -81,12 +82,15 @@ class WordCounter constructor(
         wordsMap[wordIn] = count!!
     }
 
-    private fun printWordCount() {
+    private fun printWordCount(): kotlin.collections.ArrayList<String> {
+        var finalList = arrayListOf<String>()
         val sortedMap = sortMap()
         print("Word Occurrences (Sorted by occurrence # from High to Low):\n\n")
         for (word in sortedMap) {
             print("Word: ${word.key}\t Occurrences: ${word.value}\n")
+            finalList.add("Word: ${word.key}\t\t\t\t Occurrences: ${word.value}")
         }
+        return finalList
     }
 
     private fun sortMap(): LinkedHashMap<String, Int> {
