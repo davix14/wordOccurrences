@@ -5,6 +5,7 @@ module com.module6assignment.module6assignment {
 
     requires org.kordamp.bootstrapfx.core;
     requires org.jsoup;
+    requires org.junit.jupiter.api;
 
     opens com.module6assignment.module6assignment to javafx.fxml;
     exports com.module6assignment.module6assignment;

@@ -85,9 +85,9 @@ class WordCounter constructor(
     private fun printWordCount(): kotlin.collections.ArrayList<String> {
         var finalList = arrayListOf<String>()
         val sortedMap = sortMap()
-        print("Word Occurrences (Sorted by occurrence # from High to Low):\n\n")
+//        print("Word Occurrences (Sorted by occurrence # from High to Low):\n\n")
         for (word in sortedMap) {
-            print("Word: ${word.key}\t Occurrences: ${word.value}\n")
+//            print("Word: ${word.key}\t Occurrences: ${word.value}\n")
             finalList.add("Word: ${word.key}\t\t\t\t Occurrences: ${word.value}")
         }
         return finalList
