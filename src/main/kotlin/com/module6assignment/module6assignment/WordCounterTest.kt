@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 internal class WordCounterTest {
-    lateinit var instance: WordCounter
+    private lateinit var instance: WordCounter
 
     @BeforeEach
     fun setUp() {
