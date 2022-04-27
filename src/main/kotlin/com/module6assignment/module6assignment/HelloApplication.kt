@@ -12,7 +12,7 @@ class HelloApplication : Application() {
         val scene = Scene(fxmlLoader.load(), 520.0, 440.0)
         scene.root.style = "-fx-font-family: 'serif'"
         scene.stylesheets.add(BootstrapFX.bootstrapFXStylesheet())
-        stage.title = "Module 6 Assignment"
+        stage.title = "Word Occurrences"
         stage.scene = scene
         stage.show()
     }
